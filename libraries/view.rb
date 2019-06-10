@@ -69,6 +69,8 @@ EOH
 
     include Jenkins::Helper
 
+    provides :jenkins_view
+
     def load_current_resource
       @current_resource ||= Resource::JenkinsView.new(new_resource.name)
       @current_resource.name(new_resource.name)
